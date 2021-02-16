@@ -9,7 +9,10 @@ import javax.swing.JPanel;
 
 public class SierpinskiTrianglePanelNew extends JPanel {
 		private int order = 0;
-		int c=255;
+		static int c=1;
+//		boolean p = true;
+//		int pm=1;
+		
 
 		/** Set a new order */
 		public void setOrder(int order) {
@@ -28,8 +31,58 @@ public class SierpinskiTrianglePanelNew extends JPanel {
 		}
 
 		private void displayTriangles(Graphics g, int order, Point p1, Point p2, Point p3) {
-			c=c-1;
-			Color colour = new Color(0,0,c);
+			
+//			c++;
+//			if(c==255) {
+//				c=10;
+//			}
+			
+			c = c%255+1;
+			
+//			if ((c>128) && (c<255)) {
+//				p = !p;
+//			};
+//			
+//			if (p) { c++; }
+//			else { c--; };
+			
+
+//			if((c>128) && (c<255)) {
+//				c=c+pm;
+//			}
+//			else {
+//p = !p;
+//				//				pm=pm*(-1);
+//				c=c+pm;
+//			};
+			
+			
+			
+			
+//			
+//			if(pm==0) {
+//				c--;
+//			}
+//			if(c==10) {
+//				pm++;
+//			}
+//			if(pm>0) {
+//				c++;
+//			}
+//			if(c==255) {
+//				pm--;
+//			}
+//			
+//			boolean isRising=false;
+//			if(!isRising) {
+//				c--;
+//			}
+//			if(c==1) {
+//				isRising=true;
+//			}
+			
+
+			Color colour = new Color(0,128,c);
 			if (order == 0) {
 				// Draw a triangle to connect three points
 				g.drawLine(p1.x, p1.y, p2.x, p2.y);
